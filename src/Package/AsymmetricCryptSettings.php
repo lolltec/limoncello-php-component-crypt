@@ -1,7 +1,7 @@
-<?php namespace Limoncello\Crypt;
+<?php namespace Limoncello\Crypt\Package;
 
 /**
- * Copyright 2015-2016 info@neomerx.com (www.neomerx.com)
+ * Copyright 2015-2017 info@neomerx.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,11 +16,19 @@
  * limitations under the License.
  */
 
-use RuntimeException;
+use Limoncello\Contracts\Settings\SettingsInterface;
 
 /**
- * @package Limoncello\Crypt
+ * @package Limoncello\Application
  */
-class CryptException extends RuntimeException
+abstract class AsymmetricCryptSettings implements SettingsInterface
 {
+    /** Settings key */
+    const KEY_PUBLIC_PATH_OR_KEY_VALUE = 0;
+
+    /** Settings key */
+    const KEY_PRIVATE_PATH_OR_KEY_VALUE = self::KEY_PUBLIC_PATH_OR_KEY_VALUE + 1;
+
+    /** Settings key */
+    const KEY_LAST = self::KEY_PRIVATE_PATH_OR_KEY_VALUE + 1;
 }

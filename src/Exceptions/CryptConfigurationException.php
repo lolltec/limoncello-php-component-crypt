@@ -1,4 +1,4 @@
-<?php namespace Limoncello\Crypt\Contracts;
+<?php namespace Limoncello\Crypt\Exceptions;
 
 /**
  * Copyright 2015-2017 info@neomerx.com
@@ -19,11 +19,6 @@
 /**
  * @package Limoncello\Crypt
  */
-interface CryptConfigInterface
+class CryptConfigurationException extends CryptException
 {
-    /** Config key */
-    const HASH_ALGORITHM = 0;
-
-    /** Config key */
-    const HASH_COST = self::HASH_ALGORITHM + 1;
 }
